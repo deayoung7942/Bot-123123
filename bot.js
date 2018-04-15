@@ -7,12 +7,7 @@ client.on("ready", () => {
  
 client.on("message", message => {
   if (message.content == "ping") {
-    message.channel.send("pong");
-
-  // If the message is "what is my avatar"
-  if (message.content === 'what is my avatar') {
-    // Send the user's avatar URL
-    message.reply(message.author.avatarURL);
+    message.channel.send('pong');
   }
 });
 client.on('guildMemberAdd', member => {
