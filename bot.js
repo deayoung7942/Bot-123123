@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
  
 client.on("ready", () => {
-  console.log("준비 완료!");
+  console.log("Ok!");
 });
  
 client.on("message", message => {
