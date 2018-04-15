@@ -8,6 +8,9 @@ client.on("ready", () => {
 client.on("message", message => {
   if (message.content == "ping") {
     message.reply("pong");
+   
+  if (message.content == "ping2") {
+    message.channel.send("pong2");
   }
   // If the message is "what is my avatar"
   if (message.content === 'what is my avatar') {
