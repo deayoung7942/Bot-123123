@@ -7,11 +7,21 @@ client.on("ready", () => {
  
 client.on("message", message => {
   if(message.author.bot) return; 
-  if (!message.guild) return;
+  if(message.channel.type== "dm") return;
   if (message.content == "ping") {
     message.channel.send('pong');
   }
  
+ Let messageArray = message.content.split(" ");
+ Let command = messageArray[0];
+ args = args.slice(1);
+ 
+ console.log(messageArray);
+ console.log(command);
+ console.log(args);
+ message.channel.send(messageArray);
+ message.channel.send(command);
+ message.channel.send(args);
 });
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
