@@ -19,7 +19,7 @@ client.on("message", message => {
     if (user) {
      const member = message.guild.member(user);
      message.channel.send('text : ${user.tag}');
-     );
+     )
     } else {
       message.channel.send('No');
     }
