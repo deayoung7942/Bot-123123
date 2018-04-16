@@ -6,24 +6,17 @@ client.on("ready", () => {
 });
  
 client.on("message", message => {
-   if (!message.guild) return;
+  if(message.author.bot) return; 
+  if (!message.guild) return;
   if (message.content == "ping") {
     message.channel.send('pong');
   }
-  // If the message content starts with "!kick"
-  if (message.content.startsWith('!text')) {
-    // Assuming we mention someone in the message, this will return the user
-    // Read more about mentions over at https://discord.js.org/#/docs/main/master/class/MessageMentions
-    const user = message.mentions.users.first();
-    // If we have a user mentioned
-    if (user) {
-     const member = message.guild.member(user);
-     message.channel.send('text : ${user.tag}');
-     )
-    } else {
-      message.channel.send('No');
-    }
-  }
+ 
+ if (message.content == "@text") {
+  
+   let args = args.slice(1);
+    message.channel.send('TEXT : ${args})';
+ }
 });
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
