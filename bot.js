@@ -12,11 +12,6 @@ client.on("message", message => {
     message.channel.send('pong');
   }
  
- if (message.content == "@text") {
-  
-   let args = args.slice(1);
-    message.channel.send('TEXT : ${args})';
- }
 });
 client.on('guildMemberAdd', member => {
   // Send the message to a designated channel on a server:
